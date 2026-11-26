@@ -1,0 +1,49 @@
+Requisitos: POTHOLES (BURAKA)
+
+Utilizadores
+Cidadão: reporta buracos, confirma-os e confirma reparações.
+Administrador: modera conteúdos e gere utilizadores e registos.
+
+Requisitos Funcionais
+
+Contas e acessos
+RF01. O utilizador pode registar-se, iniciar sessão e terminar sessão.
+RF02. O sistema distingue os perfis e restringe as funcionalidades de acordo com eles.
+RF03. O Administrador pode criar, bloquear ou remover utilizadores.
+
+Registo de buracos
+RF04. O Cidadão pode registar um Buraco com pelo menos uma foto, uma localização e uma descrição opcional.
+RF05. O sistema guarda automaticamente a data e a hora de cada registo.
+RF06. Qualquer pessoa pode consultar os Buracos em lista e em mapa, com filtros por estado, localização e data.
+RF07. Cada Buraco tem uma página de detalhe com todas as fotos, o histórico e o estado atual.
+
+Confirmação
+RF08. O Cidadão que encontre o mesmo buraco pode adicionar uma nova foto a confirmar que ainda existe. A foto é guardada com data e hora.
+RF09. O sistema avisa sobre possíveis duplicados quando é criado um registo perto de um já existente.
+
+Reparação
+RF10. Uma reparação pode ser comunicada com foto e data/hora, por um Cidadão.
+RF11. Outros Cidadãos podem confirmar a reparação ou contestá-la com uma nova foto que mostre que o buraco continua lá.
+RF12. Uma reparação contestada reabre o registo.
+
+Fluxo de estados
+RF13. Cada registo tem um único estado: Reportado → Confirmado → Reparado (a aguardar verificação) → Fechado, ou Reaberto.
+RF14. Todas as mudanças de estado ficam guardadas num histórico com autor, data e hora.
+
+Administração
+RF15. O Administrador pode remover fotos ou registos inadequados, fundir duplicados e alterar manualmente um estado.
+RF16. O Administrador pode consultar estatísticas básicas (registos por estado, tempo médio até à reparação, por zona).
+
+Requisitos Não Funcionais
+RNF01. Usabilidade: funciona em browsers de computador e telemóvel, e o envio de fotos é rápido e simples.
+RNF02. Desempenho: as páginas de lista e de mapa carregam em poucos segundos, com miniaturas das imagens.
+RNF03. Segurança: as palavras-passe são guardadas com hash, os uploads são validados (tipo e tamanho) e as permissões do RF02 são verificadas no servidor.
+RNF04. Integridade: as datas e horas são geradas pelo servidor, não pelo cliente, e as entradas do histórico não podem ser editadas.
+RNF05. Privacidade: as fotos e metadados não devem expor dados pessoais, como caras ou matrículas, e o utilizador é avisado disso antes de enviar.
+RNF06. Manutenibilidade: código modular e modelo de dados documentado.
+RNF07. Disponibilidade: o site deve estar acessível sempre que o alojamento estiver ativo, sem paragens programadas.
+
+Regras de Negócio
+RN01. Não é possível criar um registo sem foto.
+RN02. Um registo só passa a Fechado após confirmação da reparação, ou após N dias sem contestação (a definir).
+RN03. Um utilizador não pode confirmar o seu próprio registo nem a sua própria reparação, nem confirmar o mesmo registo mais do que uma vez.
