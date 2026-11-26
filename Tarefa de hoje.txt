@@ -5,11 +5,11 @@
 3.	Create and checkout a branch called developer using VSCode extension. Publish the branch
 
 4.	Create and checkout a branch called feature-pull-request using VSCode extension
-
+Done
 5.	Add a file to the branch named conflict-file.txt with content ”branch feature-pull-request”
-
+Done
 6.	Commit and push the changes to the remote repository using VSCode extension
-
+Done
 7.	Create a pull request to developer in GitHub
 
 8.	Merge pull request and pull changes onto the local repository
