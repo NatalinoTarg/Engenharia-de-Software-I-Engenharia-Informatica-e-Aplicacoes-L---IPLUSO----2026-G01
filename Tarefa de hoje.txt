@@ -11,7 +11,7 @@ Done
 6.	Commit and push the changes to the remote repository using VSCode extension
 Done
 7.	Create a pull request to developer in GitHub
-
+Done
 8.	Merge pull request and pull changes onto the local repository
 
 9.	Create and checkout a branch called hotfix using VSCode extension from a commit in main
