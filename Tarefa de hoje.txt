@@ -1,9 +1,9 @@
 1.	Install Git Graph VSCode extension
-
+Done
 2.	Clone the repository associated with the assignment with submodules in a local folder
-
+Done
 3.	Create and checkout a branch called developer using VSCode extension. Publish the branch
-
+Done
 4.	Create and checkout a branch called feature-pull-request using VSCode extension
 Done
 5.	Add a file to the branch named conflict-file.txt with content ”branch feature-pull-request”
